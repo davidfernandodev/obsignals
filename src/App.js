@@ -13,13 +13,18 @@ import setUtcDefault from './utils/setUtcDefault'
 import './styles/App.css'
 import menuIcon from './images/menu.svg'
 import helpIcon from './images/helpIcon.svg'
-import shieldIcon from './images/shieldIcon.svg'
 import quotexButton from './images/quotexButton.svg'
 import iqOptionButton from './images/iqOptionButton.svg'
 import exnovaButton from './images/exnovaButton.svg'
 import pocketOptionButton from './images/pocketOptionButton.svg'
 import expertOptionButton from './images/expertOptionButton.svg'
 import olimpTradeButton from './images/olimpTradeButton.svg'
+import binomoButton from './images/binomoButton.svg'
+import capitalBearButton from './images/capitalBearButton.svg'
+import raceOptionButton from './images/raceOptionButton.svg'
+import binaryCentButton from './images/binaryCentButton.svg'
+import iqCentButton from './images/iqCentButton.svg'
+import spectreAiButton from './images/spectreAiButton.svg'
 import trustedPartnerTag from './images/trustedPartnerTag.svg'
 import binaryTradersLogo from './images/binaryTradersLogo.svg'
 
@@ -66,10 +71,6 @@ function App() {
           </aside>
           <div className="topBrokers">
             <div className='content'>
-              <span>
-                <h1>TOP BROKERS</h1>
-                <p>Our trading signals are compatible with the brokers listed below</p>
-              </span>
               <div className='brokers'>
                 <a href="https://broker-qx.pro/sign-up/?lid=192387" rel="noreferrer" target='_blank'>
                   <img src={trustedPartnerTag} alt="Trusted partner tag"/>
@@ -86,39 +87,51 @@ function App() {
                   <img src={pocketOptionButton} alt="Pocket Option"/>
                   <span></span>
                 </a>
+                <a href="https://exnova.org/lp/start-trading/?aff=330594&aff_model=revenue&afftrack=" rel="noreferrer" target='_blank'>
+                  <img src={trustedPartnerTag} alt="Trusted partner tag"/>
+                  <img src={exnovaButton} alt="Exnova"/>
+                  <span></span>
+                </a>
                 <a href="https://r.shortlify.com/?prefid=1004865001" rel="noreferrer" target='_blank'>
                   <img src={expertOptionButton} alt="Expert Option"/>
-                </a>
-                <a href="https://exnova.org/lp/start-trading/?aff=330594&aff_model=revenue&afftrack=" rel="noreferrer" target='_blank'>
-                  <img src={exnovaButton} alt="Exnova"/>
                 </a>
                 <a href="https://olymptrade.com/?affiliate_id=1573874&subid1=&subid2=" rel="noreferrer" target='_blank'>
                   <img src={olimpTradeButton} alt="Olymp Trade"/>
                 </a>
+                <a href="https://binomo.com/?a=cbf288f25252&t=0" rel="noreferrer" target='_blank'>
+                  <img src={binomoButton} alt="Binomo"/>
+                </a>
+                <a href="https://capitalbear.com/" rel="noreferrer" target='_blank'>
+                  <img src={capitalBearButton} alt="Capital Bear"/>
+                </a>
+                <a href="https://raceoption.com/?trck=763e9cc74c571b9.14843958&offid=73&affusr=RVelasco&utm_source=affiliates&utm_medium=referral&utm_campaign=RVelasco&utm_content=73&utm_term=779&ocode=Njk4Ny4xODI3NC43My43NzkuMC4wLjAuMC4w" rel="noreferrer" target='_blank'>
+                  <img src={raceOptionButton} alt="Race Option"/>
+                </a>
+                <a href="https://binarycent.com/?trck=163e9cd5b6cae60.58439000&offid=45&affusr=RVelasco&utm_source=affiliates&utm_medium=referral&utm_campaign=RVelasco&utm_content=45&ocode=Njk4Ny40Ni40NS43NzcuMC4wLjAuMC4wLjAuMC4w" rel="noreferrer" target='_blank'>
+                  <img src={binaryCentButton} alt="Binary Cent"/>
+                </a>
+                <a href="https://iqcent.com/?trck=063e9cd6bd89563.87006826&offid=97&affusr=RVelasco&utm_source=affiliates&utm_medium=referral&utm_campaign=RVelasco&utm_content=97&ocode=Njk4Ny4xMTczMTUuOTcuNzcyLjAuMC4wLjAuMC4wLjAuMA" rel="noreferrer" target='_blank'>
+                  <img src={iqCentButton} alt="Iq Cent"/>
+                </a>
+                <a href="https://spectre.ai/?ref=ttraders" rel="noreferrer" target='_blank'>
+                  <img src={spectreAiButton} alt="Spectre AI"/>
+                </a>
               </div>
-              <div className="boxInformation">
-                <p>INFORMATION</p>
-                <div className="information">
-                  <p><img src={shieldIcon} width={14} height={14} alt="Shield Icon" /> All brokers listed above have been carefully examined and considered safe.</p>
-                  <p>Don't have an account with any of the brokers listed above?</p>
-                  <ul>
-                    <li>
-                      <p>Click the broker button and create an account for free.</p>
-                    </li>
-                    <li>
-                      <p>Receive $10,000.00 in your demo/training account.</p>
-                    </li>
-                  </ul>
-                </div>
+              <div className="information">
+                <p>Don't have an account?</p>
+                <ul>
+                  <li>
+                    <p>Click the broker button and create an account for <mark>free.</mark></p>
+                  </li>
+                  <li>
+                    <p>Receive <mark>$10,000.00</mark> in your demo account.</p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
         <footer>
-          <a href="https://www.binarytraders.net/" target="_blank" rel="noopener noreferrer">
-            <img src={binaryTradersLogo} width={30} height={30} alt="Binary Traders logo" />
-            <p>binarytraders.net</p>
-          </a>
         </footer>
       </div>
     </>

@@ -15,7 +15,7 @@ function WebSocketProvider({ children }){
   
   const formatDate = useFormatDate
 
-  const url = 'ws://api.agbot.com.br:9000/client'
+  const url = 'wss://obsignal.agbot.com.br/client'
   const token = 'AHteQGy0_P2fcvbMBuF5NGxYVFPlWq0m6hgDgW53'
   const timeframe = localStorage.getItem('timeframe')
   
@@ -31,9 +31,9 @@ function WebSocketProvider({ children }){
   const impactCode = {
     '#01B0F1': 'LOW IMPACT',
     '#01b0f1': 'LOW IMPACT',
-    '#00B050': 'LOW IMPACT',
+    '#00B050': 'LOW IMPACT', //Transformar essa cor em #3D943B
     '#00b050': 'LOW IMPACT',
-    '#3D943B': 'LOW IMPACT',
+    '#3D943B': 'LOW IMPACT', //Use essa cor
     '#3d943b': 'LOW IMPACT',
     '#A8CF45': 'MEDIUM IMPACT',
     '#a8Cf45': 'MEDIUM IMPACT',
@@ -256,15 +256,17 @@ function WebSocketProvider({ children }){
 
         const result = jsonData.card.result
 
+        const impactColor = (jsonData.card.timezone === '#00b050' || jsonData.card.timezone === '#00B050')? '#3D943B' : jsonData.card.timezone
+
         const data = {
           id: jsonData.card_id, 
           timeframe: jsonData.card.timeframe,
           title: jsonData.card.active,
           date: jsonData.card.date,
           direction: jsonData.card.direction,
-          color: jsonData.card.timezone,
+          color: impactColor,
           hour: jsonData.card.hour,
-          impact: impactCode[jsonData.card.timezone],
+          impact: impactCode[impactColor],
           percent: jsonData.card.status.porcent
         }
 
@@ -307,15 +309,17 @@ function WebSocketProvider({ children }){
         messageArray.map((item) => {
           const result = item.result
 
+          const impactColor = (item.timezone === '#00b050' || item.timezone === '#00B050')? '#3D943B' : item.timezone
+
           const data = {
             id: item.id, 
             timeframe: item.timeframe,
             title: item.active,
             date: item.date,
             direction: item.direction,
-            color: item.timezone,
+            color: impactColor,
             hour: item.hour,
-            impact: impactCode[item.timezone],
+            impact: impactCode[impactColor],
             percent: item.status.porcent
           }
 

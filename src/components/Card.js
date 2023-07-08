@@ -36,11 +36,11 @@ function Card({ data }){
   const [trendIsOpen, setTrendIsOpen ] = useState(false)
 
   const { status, hourCard } = useContext(WebSocketContext)
-  
+
   const { titleActive } = useEditTitle(data.title)
-  
+
   const isOTC = titleActive.includes('-OTC')
-  
+
   const classData = (isOTC)? styles.dataContentOTC: styles.dataContent
 
   const isEmptyStatus = (status.length === 0)? true : false
@@ -87,17 +87,17 @@ function Card({ data }){
           <span
            className={styles.stars}
            onMouseEnter={() => setMartingaleTooltipIsOpen(true)}
-           onMouseLeave={() => setMartingaleTooltipIsOpen(false)} 
+           onMouseLeave={() => setMartingaleTooltipIsOpen(false)}
           >
             {
               (dataStatus.martigale === 'G2') && (
                 <img
-                  src={curtedStar} 
-                  width={15} 
-                  height={15} 
+                  src={curtedStar}
+                  width={15}
+                  height={15}
                   alt="Curted Star" className={styles.signal}
                   onMouseEnter={() => setMartingaleTooltipIsOpen(true)}
-                  onMouseLeave={() => setMartingaleTooltipIsOpen(false)} 
+                  onMouseLeave={() => setMartingaleTooltipIsOpen(false)}
                 />
               )
             }
@@ -112,7 +112,7 @@ function Card({ data }){
           <span
             className={styles.martingaleTooltip}
             style={{
-              display: (martingaleTooltipIsOpen && (dataStatus.martigale === 'G1' || dataStatus.martigale === 'G2'))? 'block' : 'none', left: (dataStatus.martigale === 'G1')? '5.8rem' : '7.2rem' 
+              display: (martingaleTooltipIsOpen && (dataStatus.martigale === 'G1' || dataStatus.martigale === 'G2'))? 'block' : 'none', left: (dataStatus.martigale === 'G1')? '5.8rem' : '7.2rem'
             }}
           >
             <p className={styles.tooltipText}>
@@ -163,11 +163,11 @@ function Card({ data }){
                src={graph[dataStatus.trendGraph]}
                style={{left: (isOTC)? '0rem' : '0.1rem'}}
                onMouseEnter={() => setTrendIsOpen(true)}
-               onMouseLeave={() => setTrendIsOpen(false)} 
-               alt="Trend graph" 
+               onMouseLeave={() => setTrendIsOpen(false)}
+               alt="Trend graph"
               />
-              <span 
-                className={styles.trendTooltip} 
+              <span
+                className={styles.trendTooltip}
                 style={{display: (trendIsOpen)? 'block' : 'none' }}
               >
               <p className={styles.tooltipText}>
@@ -202,7 +202,7 @@ function Card({ data }){
                     Time to execute the trade
                   </p>
                 </span>
-              </span>              
+              </span>
               <span
                className={styles.tradingTimeframeTooltip}
                style={{display: (tradingTimeframeTooltipIsOpen)? 'block' : 'none' }}
@@ -215,19 +215,19 @@ function Card({ data }){
                     Recommended expiration time
                   </p>
                 </span>
-              </span> 
+              </span>
           </div>
           <div className={styles.boxTrend}>
             <img
-             src={button[data.direction]} 
-             onMouseEnter={() => setSignalDirectionTooltipIsOpen(true)} 
-             onMouseLeave={() => setSignalDirectionTooltipIsOpen(false)} 
-             width={85} 
-             height={80} 
-             alt="Button" 
+             src={button[data.direction]}
+             onMouseEnter={() => setSignalDirectionTooltipIsOpen(true)}
+             onMouseLeave={() => setSignalDirectionTooltipIsOpen(false)}
+             width={85}
+             height={80}
+             alt="Button"
             />
-            <span 
-            className={styles.signalDirectionTooltip} 
+            <span
+            className={styles.signalDirectionTooltip}
             style={{display: (signalDirectionTooltipIsOpen)? 'block' : 'none' }}
             >
               <p className={styles.tooltipText}>
@@ -252,7 +252,7 @@ function Card({ data }){
               )
             }
             <span
-             className={styles.newSignalTooltip} 
+             className={styles.newSignalTooltip}
              style={{display: (newSignalTooltipIsOpen)? 'block' : 'none' }}
              >
                 <p className={styles.tooltipText}>
@@ -294,7 +294,7 @@ function Card({ data }){
       </div>
       {
         (isOTC)? (
-          <footer 
+          <footer
            className={styles.footerOtc}
            onMouseEnter={() => setBrokersCompatibleTooltipIsOpen(true)}
            onMouseLeave={() => setBrokersCompatibleTooltipIsOpen(false)}
@@ -315,17 +315,17 @@ function Card({ data }){
             </span>
           </footer>
         ) : (
-          <footer 
+          <footer
            style={{background: data.color}}
            onMouseEnter={() => setTraderTimezoneTooltipIsOpen(true)}
            onMouseLeave={() => setTraderTimezoneTooltipIsOpen(false)}
            >
           <span>
-            <p className={(data.impact === 'MEDIUM IMPACT')? styles.mediumImpactText : ''}>
+            <p className={`${styles.ttzText} ${(data.impact === 'MEDIUM IMPACT')? styles.mediumImpactText : ''}`}>
             TTZ
             </p>
-            <img src={impact(data.impact)} width={14.6} height={16} alt="Impact Icon" />
-            <p className={(data.impact === 'MEDIUM IMPACT')? styles.mediumImpactText : ''}>
+            <img src={impact(data.impact)} className={styles.ttzImpact} width={14.6} height={15} alt="Impact Icon" />
+            <p style={{'position': 'relative', 'right': '0.8rem'}} className={`${styles.ttzText} ${(data.impact === 'MEDIUM IMPACT')? styles.mediumImpactText : ''}`}>
             {data.impact}
             </p>
           </span>
@@ -341,7 +341,7 @@ function Card({ data }){
                 Zones of impact on trading
               </p>
             </span>
-          </span>                    
+          </span>
         </footer>
         )
       }

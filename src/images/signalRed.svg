@@ -1,7 +1,7 @@
-<svg width="35" height="18" viewBox="0 0 35 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="32.8667" y1="2.33635" x2="32.9239" y2="15.222" stroke="#727476" stroke-width="3.86568" stroke-linecap="round"/>
-<line x1="25.1268" y1="4.9221" x2="25.1268" y2="15.2306" stroke="#727476" stroke-width="3.86568" stroke-linecap="round"/>
-<line x1="17.3966" y1="7.49839" x2="17.3966" y2="15.2298" stroke="#727476" stroke-width="3.86568" stroke-linecap="round"/>
-<line x1="9.66417" y1="10.0755" x2="9.66417" y2="15.2297" stroke="#BF3D3D" stroke-width="3.86568" stroke-linecap="round"/>
-<line x1="1.93284" y1="12.6529" x2="1.93284" y2="15.23" stroke="#BF3D3D" stroke-width="3.86568" stroke-linecap="round"/>
+<svg width="179" height="87" viewBox="0 0 179 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="168.576" y1="10.3751" x2="168.869" y2="76.4665" stroke="#363942" stroke-width="19.8274" stroke-linecap="round"/>
+<line x1="128.878" y1="23.6378" x2="128.878" y2="76.5109" stroke="#363942" stroke-width="19.8274" stroke-linecap="round"/>
+<line x1="89.2289" y1="36.8514" x2="89.2289" y2="76.5062" stroke="#363942" stroke-width="19.8274" stroke-linecap="round"/>
+<line x1="49.5687" y1="50.0699" x2="49.5687" y2="76.5065" stroke="#BF3D3D" stroke-opacity="0.9" stroke-width="19.8274" stroke-linecap="round"/>
+<line x1="9.9137" y1="63.2892" x2="9.9137" y2="76.5074" stroke="#BF3D3D" stroke-opacity="0.9" stroke-width="19.8274" stroke-linecap="round"/>
 </svg>

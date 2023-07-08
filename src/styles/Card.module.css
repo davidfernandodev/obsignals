@@ -8,7 +8,7 @@
   height: 17.2rem;
   background: #2D374F;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -20,16 +20,31 @@
   height: 100%;
   box-sizing: border-box;
   height: 17.2rem;
-  background: #2D374F;
-  border-top: 0.371528px solid rgba(255, 255, 255, 0.1);
-  border-left: 0.371528px solid rgba(255, 255, 255, 0.1);
-  border-right: 0.371528px solid rgba(255, 255, 255, 0.1);
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  background:#20232D;
+  border-top: 0.371528px solid #FFFFFF1A;
+  border-left: 0.371528px solid #FFFFFF1A;
+  border-right: 0.371528px solid #FFFFFF1A;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   overflow: hidden;
+}
+
+.ttzText {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.cardContainer > footer > span:first-child > p:nth-child(3) {
+  position: relative;
+  right: 0.8rem;
+}
+
+.ttzImpact {
+  position: relative;
+  right: 0.4rem;
 }
 
 .stars {
@@ -192,6 +207,8 @@
   text-align: start;
   font-size: clamp(1rem, 2rem + 1vw, 3rem);
   flex-grow: 1;
+  position: relative;
+  right: 0.1rem;
 }
 
 .activeOTC {
@@ -203,8 +220,8 @@
 }
 
 .trendGraph {
-  width: 94%;
-  min-width: 94%;
+  width: 96%;
+  min-width: 96%;
   height: 3.299rem;
   flex-grow: 1;
   position: relative;
@@ -222,25 +239,31 @@
 .time > span {
   display: flex;
   align-items: center;
-  font-family: system-ui, sans-serif;
+}
+
+.time > span:first-child > img {
+  position: relative;
+  top: -0.15rem;
 }
 
 .time > span:last-child > img {
   position: relative;
-  top: 0.1rem;
+  top: -0.04rem;
   left: 0.6rem;
 }
 
 .time > span:first-child > p:last-child {
   position: relative;
   left: 0.3rem;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 
 .time > span:last-child > p:last-child {
   position: relative;
   left: 0.7rem;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 
 .time > span > .mediumHour {
@@ -308,8 +331,8 @@
   align-items: center;
   height: fit-content;
   width: 100%;
-  border-bottom-left-radius: 0.4rem;
-  border-bottom-right-radius: 0.4rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   padding-bottom: 0rem;
   padding-left: 0.9rem;
   width: 97.3%;
@@ -318,7 +341,7 @@
   right: 0.1rem;
 }
 
-.cardContainer > footer > span {
+/* .cardContainer > footer > span {
   width: fit-content;
   height: fit-content;
   padding: 0px;
@@ -326,20 +349,20 @@
   gap: 0.5rem;
   position: relative;
   left: 1rem;
-  top: -0.1rem;
-}
+  top: 0.01rem;
+} */
 
 .newLoader {
   position: relative;
-  width: 2rem;
-  height: 2rem;
+  width: 1.9rem;
+  height: 1.9rem;
   margin-top: 11px;
   margin-left: 11px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.01rem;
-  top: -0.88rem;
+  top: -0.7rem;
   right: 0.4rem;
 }
 
@@ -366,17 +389,19 @@
 .cardContainer > footer > span {
   letter-spacing: 0.2rem;
   font-size: 1.0999rem;
-  font-family: system-ui, sans-serif;
   display: flex;
   align-items: center;
   gap: 0.8rem;
   position: relative;
-  left: 1.3rem;
+  left: 1rem;
+  top: 0.01rem;
 }
 
 .loading {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  position: relative;
+  top: 2px;
 }
 
 .spinner {

@@ -114,15 +114,6 @@
   gap: 2rem;
 }
 
-.main > .topBrokers > .content > span {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.8rem;
-  position: relative;
-  top: -2rem;
-}
-
 .main > .topBrokers > .content > span > h1 {
   font-weight: 400;
   font-size: 3.089rem;;
@@ -143,8 +134,8 @@
 
 .brokers {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 2rem;
   position: relative;
   right: 0.7rem;
@@ -157,10 +148,10 @@
 }
 
 .brokers > a > img {
-  width: 21.4rem;
+  width: 19.4rem;
 }
 
-.brokers > a:nth-child(1) > img:first-child, a:nth-child(2) > img:first-child, a:nth-child(3) > img:first-child {
+.brokers > a:nth-child(1) > img:first-child, a:nth-child(2) > img:first-child, a:nth-child(3) > img:first-child, a:nth-child(4) > img:first-child {
   width: 12.5rem !important;
   height: 2.5rem;
   position: absolute;
@@ -169,25 +160,29 @@
 }
 
 .brokers > a:first-child > img:first-child {
-  left: -0.8rem;
+  left: -0.75rem;
 }
 
 .brokers > a:nth-child(2) > img:first-child {
-  left: 22.6rem;
+  left: 20.65rem;
 }
 
 .brokers > a:nth-child(3) > img:first-child {
-  left: 46rem;
+  left: 42.05rem;
+}
+
+.brokers > a:nth-child(4) > img:first-child {
+  left: 63.4rem;
 }
 
 .brokers > a:first-child > span {
   position: absolute;
   top: 1.01rem;
-  left: -0.8rem;
+  left: -0.75rem;
   border-top: 0.4rem solid #DF880F;
   border-right: 0.4rem solid #DF880F;
-  border-bottom: 0.4rem solid #252F46;
-  border-left: 0.4rem solid #252F46;
+  border-bottom: 0.4rem solid #1C202A;
+  border-left: 0.4rem solid #1C202A;
 }
 
 .helpTooltip {
@@ -200,40 +195,47 @@
 .brokers > a:nth-child(2) > span {
   position: absolute;
   top: 1.01rem;
-  left: 22.6rem;
+  left: 20.65rem;
   border-top: 0.4rem solid #DF880F;
   border-right: 0.4rem solid #DF880F;
-  border-bottom: 0.4rem solid #252F46;
-  border-left: 0.4rem solid #252F46;
+  border-bottom: 0.4rem solid #1C202A;
+  border-left: 0.4rem solid #1C202A;
 }
 
 .brokers > a:nth-child(3) > span {
   position: absolute;
   top: 1.01rem;
-  left: 46rem;
+  left: 42.05rem;
   border-top: 0.4rem solid #DF880F;
   border-right: 0.4rem solid #DF880F;
-  border-bottom: 0.4rem solid #252F46;
-  border-left: 0.4rem solid #252F46;
+  border-bottom: 0.4rem solid #1C202A;
+  border-left: 0.4rem solid #1C202A;
+}
+
+.brokers > a:nth-child(4) > span {
+  position: absolute;
+  top: 1.01rem;
+  left: 63.4rem;
+  border-top: 0.4rem solid #DF880F;
+  border-right: 0.4rem solid #DF880F;
+  border-bottom: 0.4rem solid #1C202A;
+  border-left: 0.4rem solid #1C202A;
 }
 
 .information {
   width: 95.5%;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  padding-right: 3rem;
-  border: 0.1rem solid #ffff;
   position: relative;
-  right: 1.8rem;
+  right: 2.8rem;
+  bottom: 0.5rem;
 }
 
 .information > p  {
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 1.7rem;
   line-height: 150%;
-  
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 .information > ul {
@@ -241,7 +243,11 @@
   left: 1.5rem
 }
 
-.boxInformation > p {
+.information > ul > li {
+  margin-top: 0.2rem;
+}
+
+/* .boxInformation > p {
   width: fit-content;
   padding: 0.5rem;
   font-weight: 400;
@@ -253,11 +259,22 @@
   top: 1.5rem;
   left: 0.6rem;
   z-index: 1;
-}
+} */
 
 .information > ul > li p  {
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 150%;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06rem;
+}
+
+.information > ul > li:last-child > p > mark {
+  color: #FF7A27;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.information > ul > li:first-child > p > mark {
+  font-weight: 600;
+  color: #fff;
 }
